@@ -1,0 +1,60 @@
+[
+  {
+    "id": "pmay_u",
+    "name": "Pradhan Mantri Awas Yojana - Urban",
+    "category": "Housing",
+    "ministry": "Ministry of Housing & Urban Affairs",
+    "level": "Central",
+    "source_url": "https://www.myscheme.gov.in/schemes/pmay-u",
+
+    "eligibility": {
+      "income_max": 1800000,
+      "urban_resident": true,
+      "owns_pucca_house": false
+    },
+
+    "benefits": [
+      "Housing assistance under PMAY-U 2.0",
+      "Benefits vary according to the applicable vertical and category"
+    ],
+
+    "documents": [
+      "Identity proof",
+      "Address/residential proof",
+      "Income proof",
+      "EWS/LIG/MIG certificate where applicable",
+      "Bank details",
+      "Proof/affidavit regarding pucca house ownership"
+    ],
+
+    "application_url": "https://pmay-urban.gov.in/"
+  },
+
+  {
+    "id": "pm_jay",
+    "name": "Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana",
+    "category": "Healthcare",
+    "ministry": "Ministry of Health & Family Welfare",
+    "level": "Central",
+    "source_url": "https://www.myscheme.gov.in/hi/schemes/ab-pmjay",
+
+    "eligibility": {
+      "basis": "Government-identified eligible families",
+      "rural_deprivation_criteria": true,
+      "urban_occupational_criteria": true
+    },
+
+    "benefits": [
+      "Cashless hospitalization coverage up to ₹5 lakh per family per year",
+      "Secondary and tertiary hospitalization coverage"
+    ],
+
+    "documents": [
+      "Government identity proof",
+      "Address proof",
+      "Family identification/ration card or applicable family ID"
+    ],
+
+    "application_url": "https://pmjay.gov.in/"
+  }
+]

@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SevaSetu | Government Schemes Made Simple</title>
+
+    <!-- Bootstrap Icons - Free -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <a href="#" class="brand">
+
+            <div class="brand-logo">
+
+                <svg
+                    viewBox="0 0 64 64"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+
+                    <path
+                        d="M8 35 C17 20 28 19 38 31 C45 40 52 39 57 29"
+                        fill="none"
+                        stroke="#F28C28"
+                        stroke-width="7"
+                        stroke-linecap="round"
+                    />
+
+                    <path
+                        d="M8 43 C18 28 29 27 39 39 C46 47 53 46 57 37"
+                        fill="none"
+                        stroke="#16834B"
+                        stroke-width="7"
+                        stroke-linecap="round"
+                    />
+
+                    <circle
+                        cx="10"
+                        cy="34"
+                        r="4"
+                        fill="#17376D"
+                    />
+
+                    <circle
+                        cx="55"
+                        cy="29"
+                        r="4"
+                        fill="#17376D"
+                    />
+
+                </svg>
+
+            </div>
+
+
+            <div class="brand-info">
+
+                <strong>SevaSetu</strong>
+
+                <span>
+                    One Platform. Every Scheme. Every Citizen.
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a href="#" class="active">
+                Home
+            </a>
+
+            <a href="#categories">
+                Explore Schemes
+            </a>
+
+            <a href="#how-it-works">
+                How It Works
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <button class="language-btn">
+                <i class="bi bi-translate"></i>
+                English
+                <span>|</span>
+                हिंदी
+            </button>
+
+            <button
+                class="login-btn"
+                id="loginButton"
+            >
+                Login / Register
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <main>
+
+        <section class="hero">
+
+
+            <!-- Your PNG image -->
+
+            <img
+                class="hero-image"
+                src="./assets/images/hero-citizens.png"
+                alt="Indian citizens including farmers, students, workers and healthcare professionals"
+            >
+
+
+            <!-- Dark overlay for text readability -->
+
+            <div class="hero-overlay"></div>
+
+
+            <!-- Hero text -->
+
+            <div class="hero-content">
+
+                <div class="hero-label">
+
+                    <i class="bi bi-stars"></i>
+
+                    Welfare made easier
+
+                </div>
+
+
+                <h1>
+
+                    Government Schemes,
+                    <br>
+
+                    <span>Made Simple.</span>
+
+                </h1>
+
+
+                <p>
+
+                    Discover government schemes that may be relevant
+                    to you, understand your eligibility, and find the
+                    right way to apply — all in one place.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <button
+                        class="primary-btn"
+                        id="findSchemeBtn"
+                    >
+
+                        Find My Schemes
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </button>
+
+
+                    <a
+                        href="#categories"
+                        class="secondary-btn"
+                    >
+
+                        Explore All Schemes
+
+                    </a>
+
+                </div>
+
+
+                <div class="hero-trust">
+
+                    <span>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Profile-based discovery
+                    </span>
+
+                    <span>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Simple eligibility
+                    </span>
+
+                    <span>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Application guidance
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Floating card -->
+
+            <div class="hero-floating-card">
+
+                <div class="floating-card-header">
+
+                    <div class="floating-icon">
+
+                        <i class="bi bi-person-check"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Find schemes for you
+                        </h3>
+
+                        <p>
+                            Personalised discovery
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="floating-divider"></div>
+
+
+                <div class="floating-item">
+
+                    <i class="bi bi-funnel"></i>
+
+                    <span>
+                        Based on your profile
+                    </span>
+
+                </div>
+
+
+                <div class="floating-item">
+
+                    <i class="bi bi-file-earmark-check"></i>
+
+                    <span>
+                        Know required documents
+                    </span>
+
+                </div>
+
+
+                <div class="floating-item">
+
+                    <i class="bi bi-arrow-up-right-circle"></i>
+
+                    <span>
+                        Learn how to apply
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CATEGORY SECTION
+        ================================================== -->
+
+        <section
+            class="categories-section"
+            id="categories"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    EXPLORE
+                </span>
+
+                <h2>
+                    Explore Schemes Across India
+                </h2>
+
+                <p>
+                    Browse government schemes by category
+                    and discover opportunities relevant to you.
+                </p>
+
+            </div>
+
+
+            <div class="category-grid">
+
+
+                <!-- 01 -->
+
+                <button class="category-card">
+
+                    <i class="bi bi-tree category-icon"></i>
+
+                    <span>
+                        Agriculture, Rural & Environment
+                    </span>
+
+                </button>
+
+
+                <!-- 02 -->
+
+                <button class="category-card">
+
+                    <i class="bi bi-people category-icon"></i>
+
+                    <span>
+                        Benefits & Social Development
+                    </span>
+
+                </button>
+
+
+                <!-- 03 -->
+
+                <button class="category-card">
+
+                    <i class="bi bi-briefcase category-icon"></i>
+
+                    <span>
+                        Business & Self-employed
+                    </span>
+
+                </button>
+
+
+                <!-- 04 -->
+
+                <button class="category-card">
+
+                    <i class="bi bi-passport category-icon"></i>
+
+                    <span>
+                        Citizenship, Visa & Passports
+                    </span>
+
+                </button>
+
+
+                <!-- 05 -->
+
+                <button class="category-card">
+
+                    <i class="bi bi-globe-asia-australia category-icon"></i>
+
+                    <span>
+                        Defence & Foreign Affairs
+                    </span>
+
+                </button>
+
+
+                <!-- 06 -->
+
+                <button class="category-card">
+
+                    <i class="bi bi-car-front category-icon"></i>
+
+                    <span>
+                        Driving & Transport
+                    </span>
+
+                </button>
+
+
+                <!-- 07 -->
+
+                <button class="category-card">
+
+                    <i class="bi bi-mortarboard category-icon"></i>
+
+                    <span>
+                        Education & Learning
+                    </span>
+
+                </button>
+
+
+                <!-- 08 -->
+
+                <button class="category-card">
+
+                    <i class="bi bi-bank category-icon"></i>
+
+                    <span>
+                        Governance & Planning
+                    </span>
+
+                </button>
+
+
+                <!-- 09 -->
+
+                <button class="category-card">
+
+                    <i class="bi bi-heart-pulse category-icon"></i>
+
+                    <span>
+                        Health & Wellness
+                    </span>
+
+                </button>
+
+
+                <!-- 10 -->
+
+                <button class="category-card">
+
+                    <i class="bi bi-house category-icon"></i>
+
+                    <span>
+                        Housing & Local Services
+                    </span>
+
+                </button>
+
+
+                <!-- 11 -->
+
+                <button class="category-card">
+
+                    <i class="bi bi-buildings category-icon"></i>
+
+                    <span>
+                        Infrastructure & Industries
+                    </span>
+
+                </button>
+
+
+                <!-- 12 -->
+
+                <button class="category-card">
+
+                    <i class="bi bi-person-workspace category-icon"></i>
+
+                    <span>
+                        Jobs
+                    </span>
+
+                </button>
+
+
+                <!-- 13 -->
+
+                <button class="category-card">
+
+                    <i class="bi bi-file-earmark-text category-icon"></i>
+
+                    <span>
+                        Justice, Law & Grievances
+                    </span>
+
+                </button>
+
+
+                <!-- 14 -->
+
+                <button class="category-card">
+
+                    <i class="bi bi-currency-rupee category-icon"></i>
+
+                    <span>
+                        Money & Taxes
+                    </span>
+
+                </button>
+
+
+                <!-- 15 -->
+
+                <button class="category-card">
+
+                    <i class="bi bi-cpu category-icon"></i>
+
+                    <span>
+                        Science, IT & Communication
+                    </span>
+
+                </button>
+
+
+                <!-- 16 -->
+
+                <button class="category-card">
+
+                    <i class="bi bi-airplane category-icon"></i>
+
+                    <span>
+                        Travel & Tourism
+                    </span>
+
+                </button>
+
+
+                <!-- 17 -->
+
+                <button class="category-card">
+
+                    <i class="bi bi-house-heart category-icon"></i>
+
+                    <span>
+                        Welfare of Families
+                    </span>
+
+                </button>
+
+
+                <!-- 18 -->
+
+                <button class="category-card">
+
+                    <i class="bi bi-trophy category-icon"></i>
+
+                    <span>
+                        Youth Sports & Games
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             HOW IT WORKS
+        ================================================== -->
+
+        <section
+            class="how-section"
+            id="how-it-works"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    HOW IT WORKS
+                </span>
+
+                <h2>
+                    From profile to scheme in three steps
+                </h2>
+
+                <p>
+                    SevaSetu makes scheme discovery simple,
+                    transparent and easy to understand.
+                </p>
+
+            </div>
+
+
+            <div class="steps-container">
+
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <div class="step-icon">
+                        <i class="bi bi-person-lines-fill"></i>
+                    </div>
+
+                    <h3>
+                        Create Your Profile
+                    </h3>
+
+                    <p>
+                        Tell us about your age, location,
+                        education, occupation and other
+                        relevant details.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <div class="step-icon">
+                        <i class="bi bi-search"></i>
+                    </div>
+
+                    <h3>
+                        Discover Relevant Schemes
+                    </h3>
+
+                    <p>
+                        Our system compares your profile
+                        with scheme eligibility information
+                        to identify potentially relevant schemes.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <div class="step-icon">
+                        <i class="bi bi-file-earmark-check"></i>
+                    </div>
+
+                    <h3>
+                        Understand & Apply
+                    </h3>
+
+                    <p>
+                        See eligibility reasons, required
+                        documents and application information
+                        before you proceed.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ABOUT / TRUST
+        ================================================== -->
+
+        <section
+            class="about-section"
+            id="about"
+        >
+
+            <div class="about-text">
+
+                <span class="section-label">
+                    ABOUT SEVASETU
+                </span>
+
+                <h2>
+                    Making welfare
+                    <br>
+                    easier to navigate.
+                </h2>
+
+                <p>
+                    Government schemes can be difficult to
+                    discover and understand. SevaSetu brings
+                    scheme information, eligibility guidance,
+                    document requirements and application
+                    information together in one simple platform.
+                </p>
+
+            </div>
+
+
+            <div class="about-points">
+
+                <div>
+
+                    <i class="bi bi-check-circle-fill"></i>
+
+                    <span>
+                        Profile-based scheme discovery
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <i class="bi bi-check-circle-fill"></i>
+
+                    <span>
+                        Clear eligibility explanations
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <i class="bi bi-check-circle-fill"></i>
+
+                    <span>
+                        Document checklist
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <i class="bi bi-check-circle-fill"></i>
+
+                    <span>
+                        Official application information
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="footer-brand">
+
+            <strong>
+                SevaSetu
+            </strong>
+
+            <span>
+                Connecting citizens with opportunities,
+                benefits and services.
+            </span>
+
+        </div>
+
+
+        <div class="footer-right">
+
+            <span>
+                Built for citizens of India
+            </span>
+
+            <span>
+                © 2026 SevaSetu
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="./js/main.js"></script>
+    
+</body>
+
+</html>

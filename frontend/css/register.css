@@ -1,0 +1,571 @@
+/* =====================================================
+   SEVASETU REGISTRATION PAGE
+===================================================== */
+
+
+.registration-nav {
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.registration-nav a {
+
+    color: #17376d;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.registration-nav a:hover {
+
+    color: #16834b;
+}
+
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.registration-page {
+
+    width: 90%;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    padding-bottom: 80px;
+}
+
+
+.registration-header {
+
+    text-align: center;
+
+    padding: 55px 0 30px;
+}
+
+
+.registration-header h1 {
+
+    color: #172033;
+
+    font-size: 37px;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.8px;
+
+    margin: 7px 0 9px;
+}
+
+
+.registration-header p {
+
+    color: #737c87;
+
+    font-size: 13px;
+}
+
+
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
+.progress-container {
+
+    width: 80%;
+
+    max-width: 700px;
+
+    margin: 0 auto 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.progress-step {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #9aa2ad;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+}
+
+
+.progress-step.active {
+
+    color: #17376d;
+
+    font-weight: 600;
+}
+
+
+.progress-circle {
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50%;
+
+    border: 1px solid #d9dfe7;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.progress-step.active .progress-circle {
+
+    background: #17376d;
+
+    border-color: #17376d;
+
+    color: white;
+}
+
+
+.progress-line {
+
+    width: 100px;
+
+    height: 1px;
+
+    background: #dce1e7;
+
+    margin: 0 12px 19px;
+}
+
+
+
+/* =====================================================
+   FORM CARD
+===================================================== */
+
+.profile-form {
+
+    background: white;
+
+    border: 1px solid #e1e6ec;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 30px rgba(21, 43, 67, 0.06);
+
+    overflow: hidden;
+}
+
+
+.form-section {
+
+    padding: 29px 35px;
+
+    border-bottom: 1px solid #e8ebef;
+}
+
+
+.form-section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 24px;
+}
+
+
+.form-section-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #edf4fb;
+
+    color: #17376d;
+
+    font-size: 19px;
+}
+
+
+.form-section-title h2 {
+
+    color: #1d2939;
+
+    font-size: 17px;
+
+    margin-bottom: 2px;
+}
+
+
+.form-section-title p {
+
+    color: #858d97;
+
+    font-size: 10px;
+}
+
+
+
+/* =====================================================
+   FORM GRID
+===================================================== */
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 19px 18px;
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.form-group.full-width {
+
+    grid-column: 1 / -1;
+}
+
+
+.form-group label {
+
+    color: #394454;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+.form-group label span {
+
+    color: #d55d5d;
+
+    margin-left: 2px;
+}
+
+
+.form-group label span.optional {
+
+    color: #929aa5;
+
+    font-weight: 400;
+
+    margin-left: 5px;
+}
+
+
+.form-group input,
+.form-group select {
+
+    width: 100%;
+
+    height: 43px;
+
+    border: 1px solid #dce2e8;
+
+    border-radius: 8px;
+
+    background: #fbfcfd;
+
+    color: #283342;
+
+    padding: 0 13px;
+
+    outline: none;
+
+    font-size: 12px;
+
+    transition: 0.2s ease;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+
+    border-color: #6e89a9;
+
+    background: white;
+
+    box-shadow:
+        0 0 0 3px rgba(23, 55, 109, 0.07);
+}
+
+
+.form-group input::placeholder {
+
+    color: #a4abb4;
+}
+
+
+.field-note {
+
+    color: #8b939e;
+
+    font-size: 9.5px;
+
+    line-height: 1.5;
+}
+
+
+
+/* =====================================================
+   CONSENT
+===================================================== */
+
+.consent-box {
+
+    margin: 23px 35px 0;
+
+    padding: 14px 16px;
+
+    border-radius: 9px;
+
+    background: #f3f7fb;
+
+    border: 1px solid #e0e8f0;
+}
+
+
+.checkbox-label {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    color: #5c6672;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+
+.checkbox-label input {
+
+    margin-top: 2px;
+
+    accent-color: #17376d;
+}
+
+
+
+/* =====================================================
+   ACTIONS
+===================================================== */
+
+.form-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 25px 35px;
+
+    background: #fafbfd;
+}
+
+
+.back-btn {
+
+    color: #5f6975;
+
+    border: 1px solid #d9dfe6;
+
+    background: white;
+
+    padding: 11px 20px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.continue-btn {
+
+    border: none;
+
+    background: #17376d;
+
+    color: white;
+
+    padding: 12px 21px;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    transition: 0.2s ease;
+}
+
+
+.continue-btn:hover {
+
+    background: #102b57;
+
+    transform: translateY(-1px);
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .registration-page {
+
+        width: calc(100% - 25px);
+    }
+
+
+    .registration-header {
+
+        padding-top: 40px;
+    }
+
+
+    .registration-header h1 {
+
+        font-size: 29px;
+    }
+
+
+    .progress-container {
+
+        width: 100%;
+    }
+
+
+    .progress-line {
+
+        width: 35px;
+
+        margin-left: 6px;
+
+        margin-right: 6px;
+    }
+
+
+    .form-section {
+
+        padding: 25px 20px;
+    }
+
+
+    .form-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .form-group.full-width {
+
+        grid-column: auto;
+    }
+
+
+    .consent-box {
+
+        margin-left: 20px;
+
+        margin-right: 20px;
+    }
+
+
+    .form-actions {
+
+        padding: 20px;
+
+        gap: 10px;
+    }
+
+
+    .registration-nav a {
+
+        font-size: 0;
+    }
+
+
+    .registration-nav a i {
+
+        font-size: 18px;
+    }
+
+}

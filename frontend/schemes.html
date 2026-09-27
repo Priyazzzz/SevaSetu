@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>SevaSetu - Scheme Recommendations</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1f2937;
+        }
+
+        .header {
+            background: #ffffff;
+            padding: 20px 8%;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .container {
+            width: 84%;
+            max-width: 1100px;
+            margin: 50px auto;
+        }
+
+        .heading {
+            margin-bottom: 30px;
+        }
+
+        .heading h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .heading p {
+            color: #6b7280;
+            font-size: 17px;
+        }
+
+        #schemeContainer {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(300px, 1fr));
+
+            gap: 24px;
+        }
+
+        .scheme-card {
+            background: white;
+            border-radius: 16px;
+            padding: 26px;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.07);
+
+            border: 1px solid #e5e7eb;
+        }
+
+        .category {
+            font-size: 14px;
+            color: #2563eb;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .scheme-card h2 {
+            font-size: 23px;
+            margin-bottom: 15px;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .eligible {
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .not-eligible {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .verification {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .section-title {
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 12px;
+            margin-bottom: 8px;
+        }
+
+        .reasons {
+            padding-left: 20px;
+            color: #4b5563;
+        }
+
+        .reasons li {
+            margin-bottom: 6px;
+        }
+
+        .documents {
+            padding-left: 20px;
+            color: #4b5563;
+        }
+
+        .apply-btn {
+            display: inline-block;
+            margin-top: 20px;
+
+            background: #2563eb;
+            color: white;
+
+            padding: 11px 18px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+        }
+
+        .source {
+            display: block;
+            margin-top: 12px;
+
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        .empty {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <header class="header">
+
+        <div class="logo">
+            SevaSetu
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <div class="heading">
+
+            <h1>
+                Your Scheme Recommendations
+            </h1>
+
+            <p>
+                Based on the information you provided,
+                SevaSetu found the following schemes.
+            </p>
+
+        </div>
+
+
+        <div id="schemeContainer"></div>
+
+    </main>
+
+
+    <script>
+
+        // Get matching results stored by register.js
+        const storedResults =
+            sessionStorage.getItem(
+                "schemeResults"
+            );
+
+
+        const schemeContainer =
+            document.getElementById(
+                "schemeContainer"
+            );
+
+
+        // If no results exist
+        if (!storedResults) {
+
+            schemeContainer.innerHTML = `
+                <div class="empty">
+                    <h2>No scheme results found</h2>
+
+                    <p>
+                        Please complete the registration
+                        form again.
+                    </p>
+                </div>
+            `;
+
+        } else {
+
+            // Convert stored JSON back into JavaScript
+            const schemes =
+                JSON.parse(storedResults);
+
+
+            // Create one card for every scheme
+            schemes.forEach(function (scheme) {
+
+                let statusClass = "";
+
+                let statusText =
+                    scheme.status;
+
+
+                if (
+                    scheme.status === "ELIGIBLE"
+                ) {
+
+                    statusClass =
+                        "eligible";
+
+                } else if (
+                    scheme.status === "NOT_ELIGIBLE"
+                ) {
+
+                    statusClass =
+                        "not-eligible";
+
+                } else {
+
+                    statusClass =
+                        "verification";
+                }
+                const completeFields =
+    scheme.complete_fields
+        .map(function (field) {
+            return `<li>✓ ${field}</li>`;
+        })
+        .join("");
+
+
+const missingFields =
+    scheme.missing_fields
+        .map(function (field) {
+            return `<li>✗ ${field}</li>`;
+        })
+        .join("");
+
+                const reasons =
+                    scheme.reasons
+                        .map(function (reason) {
+
+                            return `
+                                <li>
+                                    ${reason}
+                                </li>
+                            `;
+
+                        })
+                        .join("");
+
+
+                const documents =
+                    scheme.documents
+                        .map(function (document) {
+
+                            return `
+                                <li>
+                                    ${document}
+                                </li>
+                            `;
+
+                        })
+                        .join("");
+
+    
+                const card = `
+                    <div class="scheme-card">
+
+                        <div class="category">
+                            ${scheme.category}
+                        </div>
+
+                        <h2>
+                            ${scheme.scheme_name}
+                        </h2>
+
+                        <div class="status ${statusClass}">
+                            ${statusText}
+                        </div> 
+                        <div class="data-completeness">
+
+    <div class="section-title">
+        Profile Data Available
+    </div>
+
+    <div class="completeness-number">
+        ${scheme.completeness}% complete
+    </div>
+
+    <div class="section-title">
+        Information Available
+    </div>
+
+    <ul class="reasons">
+        ${completeFields}
+    </ul>
+
+    ${
+        scheme.missing_fields.length > 0
+        ? `
+            <div class="section-title">
+                Information Missing / Needs Verification
+            </div>
+
+            <ul class="missing-list">
+                ${missingFields}
+            </ul>
+        `
+        : ""
+    }
+
+</div>
+
+
+                        <div class="section-title">
+                            Why this result?
+                        </div>
+
+                        <ul class="reasons">
+                            ${reasons}
+                        </ul>
+
+
+                        <div class="section-title">
+                            Documents
+                        </div>
+
+                        <ul class="documents">
+                            ${documents}
+                        </ul>
+
+
+                        <a
+                            href="${scheme.application_url}"
+                            target="_blank"
+                            class="apply-btn"
+                        >
+                            Official Application
+                        </a>
+
+
+                        <a
+                            href="${scheme.source_url}"
+                            target="_blank"
+                            class="source"
+                        >
+                            View official scheme details
+                        </a>
+
+                    </div>
+                `;
+
+
+                schemeContainer.innerHTML += card;
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SevaSetu | Find My Schemes</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Inter, Arial, sans-serif;
+            background: #f5f8fc;
+            color: #182238;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            width: 100%;
+            height: 76px;
+            background: white;
+            border-bottom: 1px solid #e5e9ef;
+
+            display: flex;
+            align-items: center;
+
+            padding: 0 55px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            text-decoration: none;
+            color: #17376d;
+        }
+
+        .brand-logo {
+            width: 42px;
+            height: 42px;
+        }
+
+        .brand-logo svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .brand-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-info strong {
+            font-size: 22px;
+            line-height: 1;
+        }
+
+        .brand-info span {
+            font-size: 9px;
+            color: #78818c;
+            margin-top: 4px;
+        }
+
+
+        /* ================= MAIN ================= */
+
+        .page {
+            min-height: calc(100vh - 76px);
+
+            display: flex;
+            justify-content: center;
+
+            padding: 45px 20px 70px;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 850px;
+        }
+
+
+        /* ================= HEADING ================= */
+
+        .heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .heading-label {
+            color: #16834b;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .heading h1 {
+            margin-top: 10px;
+
+            color: #17376d;
+
+            font-size: 34px;
+        }
+
+        .heading p {
+            margin-top: 10px;
+
+            color: #737c87;
+
+            font-size: 14px;
+        }
+
+
+        /* ================= FORM CARD ================= */
+
+        .form-card {
+            background: white;
+
+            border: 1px solid #e1e6ec;
+
+            border-radius: 18px;
+
+            padding: 35px;
+
+            box-shadow:
+                0 12px 35px rgba(20, 40, 70, 0.07);
+        }
+
+
+        /* ================= SECTION ================= */
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .form-section h2 {
+            font-size: 18px;
+
+            color: #17376d;
+
+            margin-bottom: 5px;
+        }
+
+        .form-section-description {
+            font-size: 12px;
+
+            color: #7b8490;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* ================= GRID ================= */
+
+        .form-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+        .full {
+            grid-column: 1 / -1;
+        }
+
+
+        /* ================= INPUT ================= */
+
+        .field {
+            display: flex;
+
+            flex-direction: column;
+        }
+
+        .field label {
+            font-size: 12px;
+
+            font-weight: 600;
+
+            color: #303844;
+
+            margin-bottom: 7px;
+        }
+
+        .field input,
+        .field select,
+        .field textarea {
+
+            width: 100%;
+
+            padding: 12px 13px;
+
+            border: 1px solid #dce2e8;
+
+            border-radius: 8px;
+
+            background: white;
+
+            font-size: 13px;
+
+            color: #303844;
+
+            outline: none;
+
+            transition: 0.2s;
+        }
+
+        .field input:focus,
+        .field select:focus,
+        .field textarea:focus {
+
+            border-color: #17376d;
+
+            box-shadow:
+                0 0 0 3px rgba(23, 55, 109, 0.08);
+        }
+
+        .field textarea {
+            min-height: 90px;
+
+            resize: vertical;
+        }
+
+        .hint {
+            font-size: 10px;
+
+            color: #9299a3;
+
+            margin-top: 5px;
+        }
+
+
+        /* ================= CHECKBOX ================= */
+
+        .checkbox-row {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            margin-top: 10px;
+        }
+
+        .checkbox-row input {
+            width: 16px;
+            height: 16px;
+        }
+
+        .checkbox-row label {
+            font-size: 12px;
+
+            color: #555f6d;
+        }
+
+
+        /* ================= BUTTON ================= */
+
+        .submit-area {
+            margin-top: 10px;
+
+            padding-top: 25px;
+
+            border-top: 1px solid #edf0f3;
+
+            text-align: center;
+        }
+
+        .submit-btn {
+
+            width: 100%;
+
+            border: none;
+
+            border-radius: 9px;
+
+            padding: 14px 20px;
+
+            background: #17376d;
+
+            color: white;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        .submit-btn:hover {
+            background: #102d5c;
+            transform: translateY(-1px);
+        }
+
+        .privacy {
+
+            margin-top: 12px;
+
+            font-size: 10px;
+
+            color: #9299a3;
+        }
+
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 700px) {
+
+            .navbar {
+                padding: 0 20px;
+            }
+
+            .page {
+                padding: 30px 15px;
+            }
+
+            .form-card {
+                padding: 22px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full {
+                grid-column: auto;
+            }
+
+            .heading h1 {
+                font-size: 27px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <a
+            href="index.html"
+            class="brand"
+        >
+
+            <div class="brand-logo">
+
+                <svg viewBox="0 0 64 64">
+
+                    <path
+                        d="M8 35 C17 20 28 19 38 31 C45 40 52 39 57 29"
+                        fill="none"
+                        stroke="#F28C28"
+                        stroke-width="7"
+                        stroke-linecap="round"
+                    />
+
+                    <path
+                        d="M8 43 C18 28 29 27 39 39 C46 47 53 46 57 37"
+                        fill="none"
+                        stroke="#16834B"
+                        stroke-width="7"
+                        stroke-linecap="round"
+                    />
+
+                </svg>
+
+            </div>
+
+
+            <div class="brand-info">
+
+                <strong>SevaSetu</strong>
+
+                <span>
+                    One Platform. Every Scheme. Every Citizen.
+                </span>
+
+            </div>
+
+        </a>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="page">
+
+        <div class="form-container">
+
+
+            <!-- HEADING -->
+
+            <div class="heading">
+
+                <span class="heading-label">
+                    FIND YOUR SCHEMES
+                </span>
+
+                <h1>
+                    Tell us about yourself
+                </h1>
+
+                <p>
+                    We'll use your information to identify government
+                    schemes that may be relevant to you.
+                </p>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <form
+                class="form-card"
+                id="schemeForm"
+            >
+
+
+                <!-- PERSONAL INFORMATION -->
+
+                <section class="form-section">
+
+                    <h2>
+                        Personal Information
+                    </h2>
+
+                    <p class="form-section-description">
+                        Basic information helps us understand your profile.
+                    </p>
+
+
+                    <div class="form-grid">
+
+
+                        <div class="field">
+
+                            <label>
+                                Full Name *
+                            </label>
+
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Date of Birth *
+                            </label>
+
+                            <input
+                                type="date"
+                                name="dob"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Gender *
+                            </label>
+
+                            <select
+                                name="gender"
+                                required
+                            >
+
+                                <option value="">
+                                    Select gender
+                                </option>
+
+                                <option value="male">
+                                    Male
+                                </option>
+
+                                <option value="female">
+                                    Female
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Marital Status
+                            </label>
+
+                            <select name="marital_status">
+
+                                <option value="">
+                                    Select
+                                </option>
+
+                                <option>
+                                    Single
+                                </option>
+
+                                <option>
+                                    Married
+                                </option>
+
+                                <option>
+                                    Widowed
+                                </option>
+
+                                <option>
+                                    Divorced
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Social Category
+                            </label>
+
+                            <select name="category">
+
+                                <option value="">
+                                    Select category
+                                </option>
+
+                                <option>
+                                    General
+                                </option>
+
+                                <option>
+                                    OBC
+                                </option>
+
+                                <option>
+                                    SC
+                                </option>
+
+                                <option>
+                                    ST
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Annual Family Income
+                            </label>
+
+                            <input
+                                type="number"
+                                name="income"
+                                placeholder="₹ Annual income"
+                                min="0"
+                            >
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+                <!-- EDUCATION & OCCUPATION -->
+
+                <section class="form-section">
+
+                    <h2>
+                        Education & Occupation
+                    </h2>
+
+                    <p class="form-section-description">
+                        This helps us identify education, employment and
+                        livelihood-related schemes.
+                    </p>
+
+
+                    <div class="form-grid">
+
+
+                        <div class="field">
+
+                            <label>
+                                Education Level
+                            </label>
+
+                            <select name="education">
+
+                                <option value="">
+                                    Select education
+                                </option>
+
+                                <option>
+                                    Below 10th
+                                </option>
+
+                                <option>
+                                    10th
+                                </option>
+
+                                <option>
+                                    12th
+                                </option>
+
+                                <option>
+                                    Diploma
+                                </option>
+
+                                <option>
+                                    Undergraduate
+                                </option>
+
+                                <option>
+                                    Postgraduate
+                                </option>
+
+                                <option>
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Occupation
+                            </label>
+
+                            <select name="occupation">
+
+                                <option value="">
+                                    Select occupation
+                                </option>
+
+                                <option>
+                                    Student
+                                </option>
+
+                                <option>
+                                    Farmer
+                                </option>
+
+                                <option>
+                                    Self-employed
+                                </option>
+
+                                <option>
+                                    Government Employee
+                                </option>
+
+                                <option>
+                                    Private Employee
+                                </option>
+
+                                <option>
+                                    Unemployed
+                                </option>
+
+                                <option>
+                                    Homemaker
+                                </option>
+
+                                <option>
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+                <!-- LOCATION -->
+
+                <section class="form-section">
+
+                    <h2>
+                        Location
+                    </h2>
+
+                    <p class="form-section-description">
+                        Many government schemes depend on your state,
+                        district or rural/urban location.
+                    </p>
+
+
+                    <div class="form-grid">
+
+
+                        <div class="field">
+
+                            <label>
+                                State *
+                            </label>
+
+                            <select
+                                name="state"
+                                required
+                            >
+
+                                <option value="">
+                                    Select state
+                                </option>
+
+                                <option>
+                                    Uttar Pradesh
+                                </option>
+
+                                <option>
+                                    Delhi
+                                </option>
+
+                                <option>
+                                    Maharashtra
+                                </option>
+
+                                <option>
+                                    Bihar
+                                </option>
+
+                                <option>
+                                    Madhya Pradesh
+                                </option>
+
+                                <option>
+                                    Rajasthan
+                                </option>
+
+                                <option>
+                                    West Bengal
+                                </option>
+
+                                <option>
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                District
+                            </label>
+
+                            <input
+                                type="text"
+                                name="district"
+                                placeholder="Enter district"
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Area Type
+                            </label>
+
+                            <select name="area_type">
+
+                                <option value="">
+                                    Select
+                                </option>
+
+                                <option>
+                                    Rural
+                                </option>
+
+                                <option>
+                                    Urban
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+                <!-- FAMILY -->
+
+                <section class="form-section">
+
+                    <h2>
+                        Family & Additional Information
+                    </h2>
+
+                    <p class="form-section-description">
+                        These details can help identify family and
+                        welfare-related benefits.
+                    </p>
+
+
+                    <div class="form-grid">
+
+
+                        <div class="field">
+
+                            <label>
+                                Family Size
+                            </label>
+
+                            <input
+                                type="number"
+                                name="family_size"
+                                placeholder="Number of family members"
+                                min="1"
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Number of Dependents
+                            </label>
+
+                            <input
+                                type="number"
+                                name="dependents"
+                                placeholder="Number of dependents"
+                                min="0"
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Disability Status
+                            </label>
+
+                            <select name="disability">
+
+                                <option value="">
+                                    Select
+                                </option>
+
+                                <option value="no">
+                                    No
+                                </option>
+
+                                <option value="yes">
+                                    Yes
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Do you own agricultural land?
+                            </label>
+
+                            <select name="land_owner">
+
+                                <option value="">
+                                    Select
+                                </option>
+
+                                <option value="no">
+                                    No
+                                </option>
+
+                                <option value="yes">
+                                    Yes
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="field full">
+
+                            <label>
+                                Existing Government Schemes / Benefits
+                            </label>
+
+                            <textarea
+                                name="existing_schemes"
+                                placeholder="Mention any government scheme or benefit you already receive..."
+                            ></textarea>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+                <!-- CONSENT -->
+
+                <div class="checkbox-row">
+
+                    <input
+                        type="checkbox"
+                        id="consent"
+                        required
+                    >
+
+                    <label for="consent">
+
+                        I confirm that the information provided is
+                        for demonstration purposes and may be used
+                        to identify potentially relevant schemes.
+
+                    </label>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <div class="submit-area">
+
+                    <button
+                        type="submit"
+                        class="submit-btn"
+                    >
+
+                        Find Government Schemes
+
+                        →
+                        
+                    </button>
+
+
+                    <p class="privacy">
+
+                        Prototype uses synthetic citizen data.
+                        Do not enter real Aadhaar, PAN or other
+                        sensitive identity information.
+
+                    </p>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </main>
+     <script>
+
+    const schemeForm =
+        document.getElementById("schemeForm");
+
+
+    schemeForm.addEventListener(
+        "submit",
+        async function(event) {
+
+            event.preventDefault();
+
+
+            // -----------------------------------------
+            // Collect form data
+            // -----------------------------------------
+
+            const formData =
+                new FormData(schemeForm);
+
+
+            // Convert FormData → JavaScript object
+
+            const profile =
+                Object.fromEntries(formData.entries());
+
+
+            // Convert numbers properly
+
+            if (profile.income) {
+                profile.income =
+                    Number(profile.income);
+            }
+
+            if (profile.family_size) {
+                profile.family_size =
+                    Number(profile.family_size);
+            }
+
+            if (profile.dependents) {
+                profile.dependents =
+                    Number(profile.dependents);
+            }
+
+
+            // -----------------------------------------
+            // Send data to FastAPI
+            // -----------------------------------------
+
+            try {
+
+                const response =
+                    await fetch(
+                        "http://127.0.0.1:8000/api/profile",
+                        {
+
+                            method: "POST",
+
+                            headers: {
+                                "Content-Type":
+                                    "application/json"
+                            },
+
+                            body:
+                                JSON.stringify(profile)
+
+                        }
+                    );
+
+
+                const result =
+                    await response.json();
+
+
+                console.log(
+                    "Backend response:",
+                    result
+                );
+
+
+                if (response.ok) {
+
+    console.log(
+        "Citizen profile:",
+        result.profile
+    );
+
+    console.log(
+        "Matched schemes:",
+        result.matched_schemes
+    );
+
+    sessionStorage.setItem(
+        "schemeResults",
+        JSON.stringify(
+            result.matched_schemes
+        )
+    );
+
+    sessionStorage.setItem(
+        "sevaSetuProfile",
+        JSON.stringify(
+            result.profile
+        )
+    );
+
+    window.location.href =
+        "./schemes.html";
+}
+
+                else {
+
+                    alert(
+                        "Something went wrong. Please try again."
+                    );
+
+                }
+
+
+            }
+
+            catch (error) {
+
+                console.error(
+                    "Backend connection error:",
+                    error
+                );
+
+
+                alert(
+                    "Could not connect to SevaSetu backend."
+                );
+
+            }
+
+        }
+    );
+
+</script>
+<script src="./js/register.js"></script>
+   
+</body>
+
+</html>
